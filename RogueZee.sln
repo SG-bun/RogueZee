@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RogueZee", "RogueZee\RogueZee.csproj", "{8CCDE297-A6CC-4100-ACE7-6B595B717CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{B605EC65-08D5-42C3-B663-F0CB25D4CF98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CCDE297-A6CC-4100-ACE7-6B595B717CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCDE297-A6CC-4100-ACE7-6B595B717CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCDE297-A6CC-4100-ACE7-6B595B717CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCDE297-A6CC-4100-ACE7-6B595B717CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B605EC65-08D5-42C3-B663-F0CB25D4CF98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B605EC65-08D5-42C3-B663-F0CB25D4CF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B605EC65-08D5-42C3-B663-F0CB25D4CF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B605EC65-08D5-42C3-B663-F0CB25D4CF98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
