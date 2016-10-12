@@ -71,18 +71,18 @@ namespace Engine
         
         private static void PopulateItems()
         {
-            Items.Add(new Weapon(ITEM_ID_HUNTING_KNIFE, "Rusty sword", "Rusty swords", 0, 5));
-            Items.Add(new Item(ITEM_ID_RAT_TAIL, "Rat tail", "Rat tails"));
-            Items.Add(new Item(ITEM_ID_PIECE_OF_FUR, "Piece of fur", "Pieces of fur"));
-            Items.Add(new Item(ITEM_ID_SNAKE_FANG, "Snake fang", "Snake fangs"));
-            Items.Add(new Item(ITEM_ID_SNAKESKIN, "Snakeskin", "Snakeskins"));
-            Items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10));
+            Items.Add(new Weapon(ITEM_ID_HUNTING_KNIFE, "Rusty sword", "Rusty swords", "A rusty old sword. Still better than nothing.\nDmg: 0-5", 0, 5));
+            Items.Add(new Item(ITEM_ID_RAT_TAIL, "Rat tail", "Rat tails", "The tail of a rat. Quest item."));
+            Items.Add(new Item(ITEM_ID_PIECE_OF_FUR, "Piece of fur", "Pieces of fur", "A chunk of animal fur. Quest item."));
+            Items.Add(new Item(ITEM_ID_SNAKE_FANG, "Snake fang", "Snake fangs", "The fang of a snake. Quest item."));
+            Items.Add(new Item(ITEM_ID_SNAKESKIN, "Snakeskin", "Snakeskins", "Skin from a large snake. Quest item."));
+            Items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", "A crude, but effective, weapon.\nDmg: 3-10", 3, 10));
             Items.Add(new HealingPotion(ITEM_ID_HEALING_POTION,
-                "Healing potion", "Healing potions", 5));
-            Items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs"));
-            Items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks"));
+                "Healing potion", "Healing potions", "Standard health potion.\nHeals 5 HP", 5));
+            Items.Add(new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", "The fang of a very large spider. Quest item."));
+            Items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", "The silk from very large spider. Quest item."));
             Items.Add(new Item(ITEM_ID_ADVENTURER_PASS,
-                "Adventurer pass", "Adventurers passes"));
+                "Adventurer pass", "Adventurers passes", "A legal document that allows its holder to venture into more dangerous lands."));
         }
 
         private static void PopulateMonsters()
