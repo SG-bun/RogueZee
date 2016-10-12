@@ -50,6 +50,7 @@
             this.db3 = new RogueZee.DiceBox();
             this.db2 = new RogueZee.DiceBox();
             this.db1 = new RogueZee.DiceBox();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.pnlDice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiceCombos)).BeginInit();
             this.SuspendLayout();
@@ -310,6 +311,16 @@
             this.db1.TabIndex = 0;
             this.db1.Value = 1;
             // 
+            // btnInventory
+            // 
+            this.btnInventory.Location = new System.Drawing.Point(128, 424);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(75, 23);
+            this.btnInventory.TabIndex = 18;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
             // frmMain
             // 
             this.AcceptButton = this.btnRoll;
@@ -318,6 +329,7 @@
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(645, 456);
+            this.Controls.Add(this.btnInventory);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -369,6 +381,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnInventory;
     }
 }
 

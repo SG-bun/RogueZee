@@ -16,8 +16,14 @@ namespace RogueZee
 {
     public partial class frmMain : Form
     {
-
-        public Player _player = new Player(10, 10, 5, 0);
+        //
+        // Class variables
+        //
+        
+        // Player variable
+        private Player _player = new Player(10, 10, 5, 0);
+        // Inventory window variable
+        private Form frmInventory;
         public frmMain()
         {
             InitializeComponent();
@@ -106,7 +112,7 @@ namespace RogueZee
         private void frmMain_Load(object sender, EventArgs e)
         {
             RefreshUI();
-
+            frmInventory = new frmInventory();
         }
 
         private void btnAttack_Click(object sender, EventArgs e)
@@ -120,6 +126,11 @@ namespace RogueZee
             {
                 db.Hold(false);
             }
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

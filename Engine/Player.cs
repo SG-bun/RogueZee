@@ -17,7 +17,7 @@ namespace Engine
         }
         public int Attack { get; set; }
         public int Defense { get; set; }
-        public List<InventoryItem> Inventory { get; set; }
+        public List<InventoryItem> Inventory { get; private set; }
 
         public Player(int currentHP, int maximumHP,
             int gold, int xp) : base(currentHP, maximumHP)
