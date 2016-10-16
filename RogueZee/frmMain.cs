@@ -21,9 +21,9 @@ namespace RogueZee
         //
         
         // Player variable
-        private Player _player = new Player(10, 10, 5, 0);
+        private static Player _player = new Player(10, 10, 5, 0);
         // Inventory window variable
-        private Form frmInventory;
+        private frmInventory inventoryPane = new frmInventory(ref _player);
         public frmMain()
         {
             InitializeComponent();
@@ -112,7 +112,7 @@ namespace RogueZee
         private void frmMain_Load(object sender, EventArgs e)
         {
             RefreshUI();
-            frmInventory = new frmInventory();
+            inventoryPane.RefreshUI(ref _player);
         }
 
         private void btnAttack_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace RogueZee
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-
+            inventoryPane.Show();
         }
     }
 }

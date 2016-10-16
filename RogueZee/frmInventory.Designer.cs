@@ -30,7 +30,9 @@
         {
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.gbItemDescription = new System.Windows.Forms.GroupBox();
+            this.lblDescription = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
+            this.gbItemDescription.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvInventory
@@ -46,17 +48,27 @@
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.ReadOnly = true;
             this.dgvInventory.RowHeadersVisible = false;
+            this.dgvInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventory.Size = new System.Drawing.Size(280, 240);
             this.dgvInventory.TabIndex = 0;
+            this.dgvInventory.CurrentCellChanged += new System.EventHandler(this.dgvInventory_CurrentCellChanged);
             // 
             // gbItemDescription
             // 
+            this.gbItemDescription.Controls.Add(this.lblDescription);
             this.gbItemDescription.Location = new System.Drawing.Point(8, 248);
             this.gbItemDescription.Name = "gbItemDescription";
             this.gbItemDescription.Size = new System.Drawing.Size(264, 200);
             this.gbItemDescription.TabIndex = 1;
             this.gbItemDescription.TabStop = false;
             this.gbItemDescription.Text = "Description";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.Location = new System.Drawing.Point(8, 16);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(248, 176);
+            this.lblDescription.TabIndex = 0;
             // 
             // frmInventory
             // 
@@ -72,6 +84,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Inventory";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
+            this.gbItemDescription.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -80,5 +93,6 @@
 
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.GroupBox gbItemDescription;
+        private System.Windows.Forms.Label lblDescription;
     }
 }
