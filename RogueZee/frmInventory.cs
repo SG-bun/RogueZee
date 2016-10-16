@@ -13,27 +13,18 @@ namespace RogueZee
 {
     public partial class frmInventory : Form
     {
-        //
-        // Class Variables
-        //
-
-        // Stores player inventory items
-        private List<InventoryItem> playerInventory = new List<InventoryItem>();
         public frmInventory()
         {
             InitializeComponent();
         }
-        public frmInventory(Player player)
+        public frmInventory(ref Player player)
         {
             InitializeComponent();
 
-            foreach (InventoryItem ii in player.Inventory)
-            {
-                playerInventory.Add(new InventoryItem(World.ItemByID(ii.Details.ID), ii.Quantity));
-            }
+            RefreshUI(ref player);
         }
 
-        public void RefreshUI()
+        public void RefreshUI(ref Player player)
         {
             dgvInventory.RowHeadersVisible = false;
             dgvInventory.ColumnCount = 2;
@@ -44,7 +35,7 @@ namespace RogueZee
             DataGridViewCell cell;
 
             // Adds rows and item descriptions
-            foreach (InventoryItem ii in playerInventory)
+            foreach (InventoryItem ii in player.Inventory)
             {
 
                 // Adding combo information to grid view
@@ -57,6 +48,13 @@ namespace RogueZee
                 cell.ToolTipText = ii.Details.Description;
 
             }
+        }
+
+        private void dgvInventory_CurrentCellChanged(object sender, EventArgs e)
+        {
+            DataGridViewCell dgvCurCell = dgvInventory.CurrentCell;
+
+            lblDescription.Text = dgvCurCell.ToolTipText;
         }
     }
 }

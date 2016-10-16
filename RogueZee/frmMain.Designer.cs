@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlDice = new System.Windows.Forms.Panel();
+            this.db4 = new RogueZee.DiceBox();
+            this.db5 = new RogueZee.DiceBox();
+            this.db3 = new RogueZee.DiceBox();
+            this.db2 = new RogueZee.DiceBox();
+            this.db1 = new RogueZee.DiceBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvDiceCombos = new System.Windows.Forms.DataGridView();
             this.btnAttack = new System.Windows.Forms.Button();
@@ -45,11 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.db4 = new RogueZee.DiceBox();
-            this.db5 = new RogueZee.DiceBox();
-            this.db3 = new RogueZee.DiceBox();
-            this.db2 = new RogueZee.DiceBox();
-            this.db1 = new RogueZee.DiceBox();
             this.btnInventory = new System.Windows.Forms.Button();
             this.pnlDice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiceCombos)).BeginInit();
@@ -66,6 +66,51 @@
             this.pnlDice.Name = "pnlDice";
             this.pnlDice.Size = new System.Drawing.Size(328, 112);
             this.pnlDice.TabIndex = 1;
+            // 
+            // db4
+            // 
+            this.db4.Color = System.Drawing.Color.White;
+            this.db4.Location = new System.Drawing.Point(200, 8);
+            this.db4.Name = "db4";
+            this.db4.Size = new System.Drawing.Size(56, 56);
+            this.db4.TabIndex = 4;
+            this.db4.Value = 1;
+            // 
+            // db5
+            // 
+            this.db5.Color = System.Drawing.Color.White;
+            this.db5.Location = new System.Drawing.Point(264, 8);
+            this.db5.Name = "db5";
+            this.db5.Size = new System.Drawing.Size(56, 56);
+            this.db5.TabIndex = 3;
+            this.db5.Value = 1;
+            // 
+            // db3
+            // 
+            this.db3.Color = System.Drawing.Color.White;
+            this.db3.Location = new System.Drawing.Point(136, 8);
+            this.db3.Name = "db3";
+            this.db3.Size = new System.Drawing.Size(56, 56);
+            this.db3.TabIndex = 2;
+            this.db3.Value = 1;
+            // 
+            // db2
+            // 
+            this.db2.Color = System.Drawing.Color.White;
+            this.db2.Location = new System.Drawing.Point(72, 8);
+            this.db2.Name = "db2";
+            this.db2.Size = new System.Drawing.Size(56, 56);
+            this.db2.TabIndex = 1;
+            this.db2.Value = 1;
+            // 
+            // db1
+            // 
+            this.db1.Color = System.Drawing.Color.White;
+            this.db1.Location = new System.Drawing.Point(8, 8);
+            this.db1.Name = "db1";
+            this.db1.Size = new System.Drawing.Size(56, 56);
+            this.db1.TabIndex = 0;
+            this.db1.Value = 1;
             // 
             // btnExit
             // 
@@ -266,51 +311,6 @@
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label6.UseCompatibleTextRendering = true;
             // 
-            // db4
-            // 
-            this.db4.Color = System.Drawing.Color.White;
-            this.db4.Location = new System.Drawing.Point(200, 8);
-            this.db4.Name = "db4";
-            this.db4.Size = new System.Drawing.Size(56, 56);
-            this.db4.TabIndex = 4;
-            this.db4.Value = 1;
-            // 
-            // db5
-            // 
-            this.db5.Color = System.Drawing.Color.White;
-            this.db5.Location = new System.Drawing.Point(264, 8);
-            this.db5.Name = "db5";
-            this.db5.Size = new System.Drawing.Size(56, 56);
-            this.db5.TabIndex = 3;
-            this.db5.Value = 1;
-            // 
-            // db3
-            // 
-            this.db3.Color = System.Drawing.Color.White;
-            this.db3.Location = new System.Drawing.Point(136, 8);
-            this.db3.Name = "db3";
-            this.db3.Size = new System.Drawing.Size(56, 56);
-            this.db3.TabIndex = 2;
-            this.db3.Value = 1;
-            // 
-            // db2
-            // 
-            this.db2.Color = System.Drawing.Color.White;
-            this.db2.Location = new System.Drawing.Point(72, 8);
-            this.db2.Name = "db2";
-            this.db2.Size = new System.Drawing.Size(56, 56);
-            this.db2.TabIndex = 1;
-            this.db2.Value = 1;
-            // 
-            // db1
-            // 
-            this.db1.Color = System.Drawing.Color.White;
-            this.db1.Location = new System.Drawing.Point(8, 8);
-            this.db1.Name = "db1";
-            this.db1.Size = new System.Drawing.Size(56, 56);
-            this.db1.TabIndex = 0;
-            this.db1.Value = 1;
-            // 
             // btnInventory
             // 
             this.btnInventory.Location = new System.Drawing.Point(128, 424);
@@ -350,6 +350,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RogueZee";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlDice.ResumeLayout(false);
